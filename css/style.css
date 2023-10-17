@@ -1,0 +1,407 @@
+:root {
+  --primary: #b6895b;
+  --bg: #252525;
+  --secondary: #302f2f;
+  --black: #333;
+  --white: #fff;
+  --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+  --bs-shd: 0 0.8rem 1rem rgba(102, 102, 102, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  background-color: var(--bg);
+  color: azure;
+
+  overflow-x: hidden;
+}
+
+span {
+  color: var(--primary);
+}
+/* custom */
+.trans-bg {
+  background-color: rgba(39, 39, 39, 0.095);
+  backdrop-filter: blur(20px);
+  border-bottom: 0.6px solid azure;
+}
+
+.trans-bg-low {
+  background-color: rgba(39, 39, 39, 0.095);
+  backdrop-filter: blur(6px);
+  border-radius: 6px;
+  border: solid 1px azure;
+}
+
+.bg-main {
+  background-color: var(--primary);
+  border: solid 1px azure;
+}
+
+.shadow-bx {
+  box-shadow: var(--bs-shd);
+}
+
+.bg-main-dark {
+  background-color: var(--bg);
+  border-radius: 6px;
+  border: solid 1px azure;
+}
+
+.txt-white {
+  color: azure;
+  text-shadow: var(--shadow);
+  transition: 1.2ms;
+}
+
+/* custom */
+
+/* navbar start */
+.nav-item:hover .nav-link {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+  scale: 0.95;
+}
+
+/* navbar end */
+
+/* Hero Start */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(37, 37, 37, 1) 8%,
+    rgba(255, 255, 255, 0) 55%
+  );
+}
+
+.hero .content {
+  margin-left: 1%;
+  margin-right: 1%;
+  border-radius: 12px;
+  padding: 1.2rem 5%;
+  max-width: 45rem;
+  background-color: rgba(24, 29, 29, 0.55);
+}
+
+.hero .content h1 {
+  font-size: 5em;
+  color: azure;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content span {
+  color: var(--primary);
+}
+
+.hero .content p {
+  font-size: 1.6rem;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: azure;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  transition: 0.2s;
+}
+
+.hero .content .cta:hover {
+  background-color: #ce9b67;
+}
+/* Hero End */
+
+#login-con {
+  position: fixed;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  background-color: rgb(240, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input-box label {
+  flex: 1;
+}
+
+.input-box input {
+  background-color: rgb(136, 136, 136);
+  flex: 2;
+  width: 100%;
+}
+
+.login-register button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* reservasi start */
+
+#reserve {
+  position: fixed;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  background-color: rgb(240, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  width: 100%;
+  max-width: 100vh;
+}
+
+#res-form {
+  display: grid;
+  font-size: 2.2vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0.6vh;
+  overflow: hidden;
+}
+
+#res-form .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#res-form .input {
+  background-color: azure;
+  border-radius: 6px;
+  padding: 3px;
+  width: 100%;
+}
+
+#res-form input:hover {
+  scale: 0.95;
+}
+
+#res-form select {
+  width: 100%;
+  background-color: azure;
+}
+
+#res-form select:hover {
+  scale: 0.95;
+}
+
+#res-form .btn {
+  font-size: 1.8rem;
+  background-color: azure;
+  color: var(--bg);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  width: 100%;
+}
+
+/* reservasi end */
+
+/* about Start */
+
+#about,
+#room,
+#leisure,
+#contact {
+  padding: 8rem 7% 1.4rem;
+}
+
+#about h2 {
+  font-size: 3rem;
+}
+
+#about span {
+  color: var(--primary);
+}
+
+/* about end */
+
+/* room & suites start*/
+
+#room h2 {
+  font-size: 3rem;
+}
+
+/* room & suites end*/
+
+#leisure h2 {
+  font-size: 3rem;
+}
+
+/* leisure */
+.carousel img {
+  height: 40vmax;
+  object-fit: cover;
+}
+
+/* contact Section */
+#contact h2 {
+  font-size: 3rem;
+}
+
+#contact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#contact .map {
+  flex: 1 1 50rem;
+  width: 100%;
+  height: 36rem;
+  border-radius: 12px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#contact-item {
+  background-color: #b6895b;
+}
+/* contact */
+
+/* Footer */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: azure;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+.links a:hover {
+  color: var(--bg);
+}
+
+footer .links {
+  margin-bottom: 1.3rem;
+}
+
+footer .links a {
+  color: azure;
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: var(--bg);
+  font-weight: 700;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 75.5%;
+  }
+
+  /* navabar */
+  #navbar-item {
+    text-align: right;
+  }
+
+  #btn-log-pop {
+    margin: 0 0 1vh 2vh;
+    width: 9vh;
+  }
+  /* navbar */
+
+  /* reserve form */
+  #res-form {
+    display: block;
+  }
+
+  #res-form .box {
+    flex-direction: column;
+    margin: 5px;
+  }
+
+  #res-form .input {
+    width: 100%;
+  }
+
+  #res-form select {
+    width: 100%;
+  }
+
+  #res-form .btn {
+    margin-top: 5px;
+    width: 100%;
+  }
+
+  /* reserve form */
+}

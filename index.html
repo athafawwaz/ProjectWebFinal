@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hotel</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <link rel="icon" href="img/logo/logo.png" type="png" />
+  <body>
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg trans-bg z-3 fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand ms-3" href="#">
+          <img
+            src="img/logo/logo.png"
+            class="img-fluid"
+            alt="logo"
+            style="max-width: 14vh; height: auto"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler bg-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto g-5">
+            <li class="nav-item">
+              <a
+                class="nav-link active fs-4 text-light"
+                aria-current="page"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fs-4 text-light" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fs-4 text-light" href="#room"
+                >Room & Suite</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fs-4 text-light" href="#leisure"
+                >Leisures</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fs-4 text-light" href="#contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <div id="navbar-item" class=" mb-md-2  ">
+            <button
+              class="btn btn-light "
+              type="button"
+              style="margin-right: 2vh;
+              width: 9vh;"
+              id="btn-log-pop"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+        <!-- login popup start -->
+        <div class="container-sm bg-primary" id="main-con">
+          <div class=" bg-main " id="login-con">
+            <h2 class="text-center p-2 bg-main rounded-3">Login</h2>
+            <form action="#" class="m-3">
+              <div class="input-box p-2 ps-0 fs-4 " >
+                <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                <label for="">Email</label>
+                <input type="email" required class="trans-bg-low" />           
+              </div>
+              <div class="input-box p-2 ps-0 fs-4">
+                <span class="icon"
+                  ><ion-icon name="lock-closed-outline"></ion-icon
+                ></span>
+                <label for="">Password</label>
+                <input type="password" required class="trans-bg-low"/>           
+              </div>
+              
+              <div class="login-register m-3 text-center">
+                <button type="submit" class="bg-main-dark text-light px-5 py-2 mb-4">Login</button>
+                <p>
+                  Don't have an account?<a href="#" class="register-link"
+                    >Register</a
+                  >
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- login popup end -->
+
+    <!-- Hero section start -->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Rest <span>Your day</span></h1>
+        <p class="flex-sm-grow-1">
+          Tired of the daily hustle and bustle ?, <br />
+          take a short break to our little
+          <span>Paradise</span>
+        </p>
+        <button class="cta" id="btn-res-pop">Reserve now</button>
+      </main>
+    </section>
+
+    <!-- Hero section end -->
+
+        <!-- Reservation -->
+        <div class="container">
+          <section id="reserve" class="z-3">
+            <h2 class="text-center bg-main-dark p-4"><span>Room</span> Reservation</h2>   
+            <form action="" class="bg-main p-2 rounded-2" id="res-form">   
+              <div class="box trans-bg-low m-2">
+                <p>check in <span>*</span></p>
+                <input type="date" class="input" />
+              </div>
+    
+              <div class="box trans-bg-low m-2">
+                <p>check out <span>*</span></p>
+                <input type="date" class="input" />
+              </div>
+    
+              <div class="box trans-bg-low m-2">
+                <p>adults <span>*</span></p>
+                <select name="adultsIn" id="adultsIn" class="input">
+                  <option value="1">1 adults</option>
+                  <option value="2">2 adults</option>
+                  <option value="3">3 adults</option>
+                  <option value="4">4 adults</option>
+                  <option value="5">5 adults</option>
+                  <option value="6">6 adults</option>
+                </select>
+              </div>
+    
+              <div class="box trans-bg-low m-2">
+                <p>children <span>*</span></p>
+                <select name="childIn" id="childIn" class="input">
+                  <option value="1">1 child</option>
+                  <option value="2">2 child</option>
+                  <option value="3">3 child</option>
+                  <option value="4">4 child</option>
+                  <option value="5">5 child</option>
+                  <option value="6">6 child</option>
+                </select>
+              </div>
+    
+              <div class="box trans-bg-low m-2">
+                <p>rooms <span>*</span></p>
+                <select name="roomsIn" id="roomsIn" class="input">
+                  <option value="1">Luxury</option>
+                  <option value="2">Queen</option>
+                  <option value="3">Double king</option>
+                  <option value="4">Superior</option>
+                  <option value="5">Deluxe</option>                
+                </select>
+              </div>
+    
+              <input type="submit" value="check availability" class="btn " />
+            </form>
+          </section>
+        </div>
+    
+        <!-- end -->
+    
+
+
+    <!-- about start -->
+    <section id="about" class="">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <h2 class="">About <span>Us</span></h2>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid trans-bg-low">
+        <div class="row m-0 justify-content-center align-items-center">
+          <div class="col-lg-6 text-light">
+            <img
+              class="img-fluid rounded-4 py-lg-3 position-relative"
+              src="img/about.jpg"
+              alt="about"
+            />
+          </div>
+
+          <div class="col-lg-5 p-4 text-light text-start fs-4">
+            <h4>Why choose us?</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              molestiae id magni placeat cupiditate ipsum iste suscipit, libero,
+              non, praesentium enim tempore fugit? Consequuntur repellendus
+              nulla possimus odio consequatur deleniti rem necessitatibus dicta
+              similique iusto!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about end  -->
+
+    <!-- room & suite start-->
+    <section class="" id="room">
+      <div class="container-fluid text-center">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="">Room <span>&</span> Suites</h2>
+          </div>
+        </div>
+      </div>
+      <div
+        class="row row-cols-1 row-cols-xl-3 row-cols-md-2 g-5 m-2 p-4 justify-content-center trans-bg-low"
+      >
+        <div class="col">
+          <div class="card">
+            <img src="img/Room/Superior.jpg" class="card-img-top" alt="..." />
+            <div class="card-body trans-bg-low">
+              <h5 class="card-title">Superior Suite</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="img/Room/double king.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body trans-bg-low">
+              <h5 class="card-title">Double King Suite</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="img/Room/Luxury.jpg" class="card-img-top" alt="..." />
+            <div class="card-body trans-bg-low">
+              <h5 class="card-title">Luxury Suite</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="img/Room/Deluxe.jpg" class="card-img-top" alt="..." />
+            <div class="card-body trans-bg-low">
+              <h5 class="card-title">Deluxe room</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="img/Room/Queen.jpg" class="card-img-top" alt="..." />
+            <div class="card-body trans-bg-low">
+              <h5 class="card-title">Queen suite</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- room & suite end-->
+
+    <!-- leisure start -->
+    <section id="leisure">
+      <div class="container-fluid text-center mb-3">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="">Leisures</h2>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid trans-bg-low">
+        <div class="row justify-content-around p-3 ">
+          <div class="col-12 bg-main p-lg-5  rounded-5">
+            <div
+              id="carouselExampleCaptions"
+              class="carousel slide bg-primary rounded-4"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="img/facility/bar.jpg"
+                    class="d-block w-100 rounded-4"
+                  />
+                  <div class="carousel-caption bg-main-dark">
+                    <h5>o'Niel Bar</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/facility/resto.jpg"
+                    class="d-block w-100 rounded-4"
+                  />
+                  <div class="carousel-caption bg-main-dark">
+                    <h5>Misty Horizon Resto</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/facility/spa.jpg"
+                    class="d-block w-100 rounded-4"
+                  />
+                  <div class="carousel-caption bg-main-dark ">
+                    <h5>Lazy Cats <br>Relax & Spa</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="img/facility/Pool.jpg"
+                    class="d-block w-100 rounded-4"
+                  />
+                  <div class="carousel-caption bg-main-dark ">
+                    <h5>Swiming Pool</h5>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- leisure end -->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="">
+      <div class="container-fluid text-center mb-3">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="">Contact <span>us</span></h2>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid trans-bg-low">
+        <div class="row p-3">
+          <div class="col-12 col-lg-6  ">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31556.3698869875!2d115.11941641853436!3d-8.639484521210957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23861f4589665%3A0x5030bfbca82fd30!2sCanggu%2C%20Kec.%20Kuta%20Utara%2C%20Kabupaten%20Badung%2C%20Bali!5e0!3m2!1sid!2sid!4v1688746562997!5m2!1sid!2sid"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="map "
+            ></iframe>
+          </div>
+          <div class="col-12 col-lg-6">
+            <form class="mt-3 mt-lg-0 " id="myForm">
+              <div class="mb-3 fs-4  trans-bg-low p-2"
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control fs-5"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="your@email.com"
+                />
+                <div id="emailHelp" class="form-text">
+                  We'll never share your email with anyone else.
+                </div>
+              </div>
+
+              <div class="mb-3 fs-4 trans-bg-low p-2">
+                <label for="exampleFormControlTextarea1" class="form-label"
+                  >Critics and suggestions</label
+                >
+                <textarea
+                  class="form-control fs-5"
+                  id="exampleFormControlTextarea1"
+                  rows="10"
+                  placeholder="Your message"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Footer Start -->
+    <footer class="bottom-0 container-fluid" style="height: 20vmax">
+      <div class="socials">
+        <a href=""><i data-feather="instagram"></i></a>
+        <a href=""><i data-feather="twitter"></i></a>
+        <a href=""><i data-feather="facebook"></i></a>
+      </div>
+
+      <div class="links"></div>
+
+      <div class="credit">
+        <p>Created by <a href="">Group5</a>. | &copy; 2023</p>
+      </div>
+    </footer>
+
+    <!-- Footer End -->
+
+
+    <!-- Script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+
+    <!-- Icons -->
+    <script>
+      feather.replace();
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  </body>
+</html>
